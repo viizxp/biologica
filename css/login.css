@@ -1,0 +1,86 @@
+.login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fea8f3;
+  justify-content: center;
+}
+
+.login__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.login__header img {
+  width: 250px;
+}
+
+
+
+.login__header h1 {
+  color: #333;
+  font-size: 1.5em;
+}
+
+.login__input {
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: #333;
+  font-size: 1em;
+  margin-bottom: 15px;
+  max-width: 300px;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+}
+
+.login__button {
+  background-color: #c03d9b;
+  border: 3px solid #d385d7;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  max-width: 300px;
+  padding: 15px;
+  width: 100%;
+}
+
+.login__button:disabled {
+  background-color: #eee;
+  border: 2px solid #f7f6f6;
+  color: #aaa;
+  cursor: auto;
+}
+.level-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.level-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;  /* Diminuir o tamanho do padding */
+  cursor: pointer;
+  font-size: 14px;  /* Diminuir o tamanho da fonte */
+}
+
+.level-button:hover {
+  background-color: #ddd;
+}
+
+.level-button:active {
+  background-color: #ccc;
+}
+
+.login__input {
+  width: calc(100% - 22px);
+  margin: 10px 0;
+  padding: 10px;
+}

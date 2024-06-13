@@ -1,0 +1,89 @@
+body {
+  background: url('../imagens/background.jpg') no-repeat center center fixed; /* Define a imagem de fundo */
+  background-color: #c03d9b; /* Define o fundo rosa */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container do jogo */
+#game {
+  text-align: center;
+  background-color: #4C0669; /* Fundo branco semi-transparente */
+  border-radius: 10px;
+  padding: 40px; /* Aumenta o padding */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Aumenta o box-shadow */
+  width: 100%; /* Define a largura da seção */
+  max-width: 1500px; /* Define a largura máxima da seção */
+  height: auto; /* Permite que a altura seja automática */
+}
+
+h1 {
+  color: #333;
+}
+
+.player, #difficulty-level, #motivational-message {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.timer {
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+  gap: 20px; /* Espaço entre as cartas */
+  margin-top: 20px;
+  justify-content: center; /* Centraliza o grid */
+  max-width: 90%; /* Garante que o grid não ultrapasse a largura do contêiner */
+}
+
+/* Estilo das cartas */
+.card {
+  width: 175px; /* Define a largura da carta */
+  height: 270px; /* Define a altura da carta */
+  perspective: 1000px;
+  position: relative;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.front {
+  background-size: cover;
+}
+
+.back {
+  background-color: #333;
+  transform: rotateY(180deg);
+}
+
+.reveal-card .back {
+  transform: rotateY(0);
+}
+
+.reveal-card .front {
+  transform: rotateY(-180deg);
+}
+
+.disabled-card {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 920px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+  }
+}
